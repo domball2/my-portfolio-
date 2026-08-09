@@ -6,39 +6,53 @@
 <title>Dominique Ball — AEMT · Researcher</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
   :root{
-    --ink:#0B1F2A;
-    --ink-soft:#1C3140;
-    --paper:#F5F3EE;
-    --paper-raised:#FFFFFF;
-    --accent:#FF6B35;
-    --accent-dim:#FFE1D1;
-    --line:#D8D5CC;
-    --steel:#5B6B72;
-    --radius:2px;
-    --shadow:0 1px 2px rgba(11,31,42,0.06), 0 8px 24px -12px rgba(11,31,42,0.18);
+    --bg: #0a0d12;
+    --panel: #12161d;
+    --panel-2: #171d26;
+    --border: #232b36;
+    --text: #e7ebf0;
+    --muted: #7c8896;
+    --cyan: #4fd8e8;
+    --cyan-dim: #4fd8e833;
+    --gold: #e8b34f;
+    --danger: #e8615f;
+    --radius: 10px;
   }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+
+  *{ box-sizing: border-box; }
+
+  html, body{
+    margin:0; padding:0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+  }
+
   body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Source Serif 4', Georgia, serif;
-    -webkit-font-smoothing:antialiased;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 39px, #ffffff06 39px, #ffffff06 40px),
+      repeating-linear-gradient(90deg, transparent, transparent 39px, #ffffff06 39px, #ffffff06 40px);
+    background-attachment: fixed;
   }
-  h1,h2,h3,.display{
-    font-family:'Libre Franklin', sans-serif;
-    letter-spacing:-0.01em;
+
+  a{ color: inherit; }
+
+  ::selection{ background: var(--cyan-dim); color: var(--text); }
+
+  :focus-visible{
+    outline: 2px solid var(--cyan);
+    outline-offset: 2px;
+    border-radius: 4px;
   }
-  .mono{
-    font-family:'IBM Plex Mono', monospace;
-    letter-spacing:0.02em;
-  }
-  a{color:inherit;}
-  img{max-width:100%;display:block;}
-  button{font-family:'Libre Franklin', sans-serif;cursor:pointer;}
+
+  .mono{ font-family: 'JetBrains Mono', monospace; }
 
   /* ===== NAV ===== */
   .topbar{
